@@ -1,0 +1,78 @@
+Objective: Close all critical gaps in security, scalability, testing, and documentation to raise production readiness from 78/100 to 100/100.
+
+🔒 Security (72 → 100)
+Implement CSRF protection: add csurf middleware or double‑submit cookie pattern for all 166 state‑changing endpoints.
+
+Complete 2FA/MFA: install otplib or speakeasy, add setup/verify routes, wire Settings UI.
+
+Expand Zod validation: apply validateBody middleware to all ~130 remaining endpoints.
+
+🧑‍💻 Code Quality (35 → 100)
+Install Jest/Vitest and write unit tests for auth, storage, middleware.
+
+Add API integration tests for CRUD, billing, and AI functions.
+
+Add E2E tests with Playwright/Cypress for onboarding and workflows.
+
+Apply pagination middleware to all list endpoints.
+
+Introduce structured logging with Pino/Winston (log levels, request IDs).
+
+Integrate Sentry for error tracking.
+
+📊 Data Integrity (70 → 100)
+Seed remaining empty tables: leave_requests, compliance_records, knowledge_articles, plus organizations.
+
+Add backup/restore scripts (pg_dump + scheduled jobs).
+
+Replace db:push with migration files.
+
+Add soft delete (deletedAt) to all tables.
+
+Ensure audit logging for all CRUD operations.
+
+🎨 Frontend UX (75 → 100)
+Conduct full WCAG 2.1 AA accessibility audit.
+
+Implement keyboard shortcuts (Cmd+K palette, navigation hotkeys).
+
+Add onboarding tour with react-joyride or shepherd.js.
+
+💰 Monetization Readiness (72 → 100)
+Propagate multi‑tenancy: add organizationId to employees, candidates, and all entity tables.
+
+Build guided onboarding wizard for new organizations.
+
+Enable custom branding: per‑tenant logo upload, full white‑labeling.
+
+Expand SLA monitoring: uptime dashboard with historical tracking.
+
+⚡ Scalability (20 → 100)
+Apply pagination to all list endpoints.
+
+Add Redis caching for frequent reads (employees, departments).
+
+Implement BullMQ/Redis job queue for AI tasks, emails, reports.
+
+Serve static assets via CDN.
+
+Containerize with Docker/Kubernetes for horizontal scaling.
+
+🧪 Testing (5 → 100)
+Add unit, integration, E2E, load tests.
+
+Install Jest + Playwright, configure CI/CD pipeline.
+
+Cover auth, CRUD, AI functions, billing, onboarding.
+
+📚 Documentation (55 → 100)
+Generate Swagger/OpenAPI spec for all 290+ endpoints.
+
+Write Admin Guide for multi‑tenant setup.
+
+Expand Deployment Guide with migrations, scaling, env vars.
+
+Publish User Guide for employee/admin workflows.
+
+📌 Final Prompt (Copy‑Paste)
+Code

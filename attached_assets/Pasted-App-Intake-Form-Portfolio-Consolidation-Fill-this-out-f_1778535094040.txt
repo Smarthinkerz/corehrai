@@ -1,0 +1,92 @@
+App Intake Form — Portfolio Consolidation
+Fill this out for the app you're working on. Be brief but specific. If something doesn't apply, write "N/A". If you don't know, write "?".
+
+1. Identity
+App name:
+One-line purpose (what does it do, for whom?):
+Public URL (Replit dev + published if any):
+Admin URL (if separate):
+Repository / Replit project URL:
+Status: live with paying users / live no users / dev / abandoned
+Approx monthly active users:
+Approx monthly revenue (USD):
+Hours/month you (the owner) spend on it:
+2. Tech stack
+Backend language + framework: (e.g. Python/FastAPI, Node/Express, Streamlit)
+Frontend: (e.g. Streamlit, React, plain HTML)
+Database: (Postgres / SQLite / MongoDB / none)
+Hosted on: (Replit dev / Replit deployment / external)
+External APIs/services in use: (Tap, Resend, Anthropic, OpenAI, etc.)
+3. Public-facing features
+List every page/section a logged-out visitor sees:
+
+Landing page sections (hero, pricing, testimonials, etc.)
+Public sub-pages (legal, blog, help)
+Public APIs (anything /api/public/* or unauthenticated)
+Forms that collect data (contact, signup, lead)
+4. Authenticated user features
+List everything a logged-in user can do:
+
+Auth method (email/password, OAuth, magic link)
+Sections/tabs in the user dashboard
+Subscription tiers + price for each
+Limits per tier (e.g. "Free = 3 lookups/day")
+5. Admin features (the CRM piece)
+This is the most important section for consolidation. List everything you do as the owner:
+
+View/edit users
+Send broadcast emails
+View orders / refund
+Edit website content (pages, blog, media)
+Moderate user-generated content
+View analytics (page views, signups, revenue)
+Configure settings (API keys, feature toggles)
+Export data (users, orders, signals, etc.)
+Manage subscriptions (upgrade/downgrade/cancel)
+Anything else you do regularly
+6. Database tables
+List every table + a one-line purpose. Example:
+
+users           — accounts, bcrypt password, tier
+orders          — purchase records, status, amount
+leads           — inbound contact-form submissions
+content_blocks  — editable homepage sections
+
+Mark which tables hold PII (personal data: email, phone, address, payment info).
+
+7. Background jobs / scheduled tasks
+For each cron/scheduler:
+
+Name
+Cadence (every X minutes/hours)
+What it does
+What table(s) it writes to
+8. Integrations / webhooks
+Outbound: what does this app POST to (Smarthinkerz proxy, Slack, Zapier, etc.)
+Inbound: what posts to this app (Tap webhooks, Stripe webhooks, partner webhooks)
+API keys/secrets required (just names, not values: ANTHROPIC_API_KEY, RESEND_API_KEY, …)
+9. Payments
+How does the app take money? (Stripe direct / Tap direct / Smarthinkerz proxy / none)
+Plans/SKUs sold: (name + price + cycle)
+Where does subscription state live? (which DB column)
+How is tier upgraded after payment? (webhook / polling / manual / Smarthinkerz partner webhook)
+10. Email / notifications
+Provider: (Resend / SendGrid / SMTP / none)
+Email types sent: (welcome, password reset, receipt, broadcast, alerts)
+Who triggers them: (system events / admin manual / scheduled)
+11. Branding
+Brand name:
+Color palette / theme:
+Logo + favicon location:
+Does it share Smarthinkerz branding ("Powered by Smarthinkerz")? yes/no
+Public domain (if any):
+12. What's broken / blocked / on the wishlist
+Known bugs:
+External blockers: (waiting on which API key, partner, decision)
+Top 3 things owner wants next:
+13. Cross-app links
+Does this app know about any of your other apps? (which ones, what for)
+Does it share users/data with another app? (e.g. SSO, shared customer record)
+Does it depend on Smarthinkerz? (payment proxy, leads, branding, anything)
+14. The honest question
+If you stopped working on this app for 90 days, what breaks? (nothing / customers angry / revenue stops / silent failure)

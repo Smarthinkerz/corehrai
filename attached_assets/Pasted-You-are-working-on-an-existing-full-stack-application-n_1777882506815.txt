@@ -1,0 +1,359 @@
+You are working on an existing full-stack application, not building a new one.
+
+Application:
+
+AI HR Agent — Intelligent HR Management Platform
+
+Tech Stack:
+Frontend: React 18 + TypeScript + Vite + Tailwind + Shadcn/UI
+Backend: Node.js + Express + TypeScript
+ORM: Drizzle ORM (schema already exists)
+Database: PostgreSQL (configured but NOT fully active yet)
+Current Storage: MemStorage (IN-MEMORY — MUST BE REMOVED)
+Auth: Passport.js + express-session
+AI: OpenAI GPT-4o
+Integrations: Slack, Mailtrap, Zoom (partial), Google API (unused)
+🎯 GLOBAL OBJECTIVE
+
+Transform this system into:
+
+A production-grade, enterprise SaaS AI HR platform with autonomous AI decision-making capabilities
+
+Final Target State:
+100% API success rate
+Fully PostgreSQL-based persistence
+Zero mock data
+Fully secure authentication + RBAC
+Modular backend architecture
+AI decision intelligence engine
+Multi-tenant SaaS system
+Real-time HR intelligence system
+🔴 PHASE 1 — CRITICAL FIXES (STABILITY + A+ FOUNDATION)
+1. REMOVE MemStorage COMPLETELY
+Problem:
+
+Runtime failures:
+
+storage.getAllUsers is not a function
+FIX:
+DELETE MemStorage entirely
+DO NOT patch it
+REPLACE with PostgreSQL + Drizzle only
+ALL DATA ACCESS MUST USE:
+await db.select().from(users);
+2. FIX ALL FAILING API ENDPOINTS (100% SUCCESS REQUIRED)
+
+Fix ALL endpoints returning 500:
+
+/api/users
+/api/documents
+/api/job-postings
+/api/interviews
+/api/surveys
+/api/compliance-records
+/api/learning-path
+/api/exports/csv
+REQUIREMENTS:
+No runtime errors
+Proper try/catch handling
+Zod validation for inputs
+Consistent JSON responses
+3. REMOVE ALL MOCK DATA
+DELETE:
+Inline arrays in routes.ts
+Hardcoded employees/candidates/departments/wellness data
+RULE:
+
+ZERO hardcoded data anywhere in backend routes
+
+4. RE-ENABLE AUTHENTICATION (CRITICAL SECURITY FIX)
+Frontend:
+
+Enable:
+
+<AuthProvider>
+  <ProtectedRoute>
+Backend:
+
+Protect ALL routes except:
+
+/api/login
+/api/register
+Middleware:
+if (!req.isAuthenticated()) return res.status(401);
+5. REMOVE HARD-CODED ADMIN
+
+DELETE:
+
+admin / password123
+
+Replace with secure user creation flow.
+
+6. FIX STORAGE ARCHITECTURE
+
+Ensure:
+
+SINGLE storage system (PostgreSQL only)
+NO dual mock + DB pattern
+7. SPLIT routes.ts (3577 LINES → MODULAR)
+
+Create:
+
+server/routes/users.ts
+server/routes/employees.ts
+server/routes/candidates.ts
+server/routes/surveys.ts
+server/routes/documents.ts
+server/routes/compliance.ts
+server/routes/wellness.ts
+server/routes/interviews.ts
+
+Mount properly in server index.
+
+8. SERVICE LAYER INTRODUCTION
+
+Add:
+
+server/services/
+  userService.ts
+  recruitmentService.ts
+  surveyService.ts
+
+Architecture:
+
+Routes → Services → Database
+
+9. FIX CSV EXPORT + INTEGRATIONS
+Fix CSV schema mismatch
+Fix Slack invalid auth
+Prepare Zoom integration layer
+10. SEED MISSING DATA
+
+Populate:
+
+surveys
+compliance records
+survey responses
+wellness metrics
+wellness enrollments
+11. SECURITY HARDENING
+
+Add:
+
+helmet
+cors
+express-rate-limit
+input sanitization
+12. CLEAN CODEBASE
+Remove .bak / .new files
+Remove console.log
+Standardize error handling
+✅ PHASE 1 SUCCESS CRITERIA
+100% API success rate
+No mock data
+PostgreSQL fully active
+Auth fully enforced
+Modular backend structure
+🟣 PHASE 2 — ENTERPRISE SaaS TRANSFORMATION
+13. MULTI-TENANT ARCHITECTURE
+
+Add:
+
+organizations table
+
+All tables MUST include:
+
+organization_id
+
+All queries MUST be scoped:
+
+where(eq(users.organizationId, orgId))
+14. ROLE-BASED ACCESS CONTROL (RBAC)
+
+Roles:
+
+Admin
+HR Manager
+Employee
+
+Add:
+
+requireRole("admin")
+15. AUDIT LOG SYSTEM
+
+Create:
+
+audit_logs table
+
+Track:
+
+user actions
+admin changes
+AI decisions
+16. AI DECISION ENGINE (CORE DIFFERENTIATOR)
+
+Create:
+
+aiDecisionEngine.ts
+
+Capabilities:
+
+hiring recommendations
+attrition prediction
+performance risk scoring
+workforce optimization
+
+Store results in:
+
+ai_decisions table
+17. REAL-TIME SYSTEM
+
+Add:
+
+WebSockets or SSE
+
+Features:
+
+live HR dashboard updates
+instant notifications
+18. ANALYTICS LAYER
+
+Build:
+
+HR metrics engine
+engagement scoring
+hiring efficiency analytics
+19. INTEGRATIONS EXPANSION
+
+Implement:
+
+Google Calendar integration
+Replace Mailtrap → SendGrid
+20. CACHING LAYER
+
+Add Redis for:
+
+dashboard queries
+analytics
+AI results
+21. BACKGROUND JOBS
+
+Add queue system:
+
+BullMQ
+
+Jobs:
+
+AI processing
+email sending
+report generation
+22. TESTING LAYER
+
+Add:
+
+Vitest/Jest
+
+Cover:
+
+auth
+APIs
+AI services
+23. DEVOPS READINESS
+production env configs
+logging system
+deployment readiness
+🟢 PHASE 2 SUCCESS CRITERIA
+multi-tenant system working
+RBAC enforced
+audit logs active
+AI engine operational
+integrations working
+scalable architecture ready
+🔵 PHASE 3 — AUTONOMOUS AI HR SYSTEM (NEXT-GEN)
+24. AUTONOMOUS AI HR ENGINE
+
+Create:
+
+autonomousHRAgent.ts
+Capabilities:
+autonomous hiring recommendations
+auto-screening candidates
+auto-ranking applicants
+detecting workforce risks
+suggesting HR actions
+25. AI WORKFLOW AUTOMATION ENGINE
+
+Create system that can:
+
+trigger HR workflows automatically
+assign onboarding tasks
+schedule interviews automatically
+flag compliance risks
+26. PREDICTIVE WORKFORCE SIMULATION
+
+AI models that predict:
+
+employee churn
+hiring needs
+department overload
+future workforce gaps
+27. NATURAL LANGUAGE HR COMMAND SYSTEM
+
+Enable:
+
+“Hire 3 backend engineers in Dubai under $8k budget”
+
+System translates into:
+
+job posting creation
+candidate sourcing
+interview scheduling
+28. VOICE-BASED HR ASSISTANT
+
+Add:
+
+speech-to-text HR control
+voice commands for HR operations
+29. EXECUTIVE AI DASHBOARD
+
+Create:
+
+CEO-level HR intelligence panel
+predictive KPIs
+AI-generated strategic recommendations
+30. SELF-IMPROVING AI LAYER
+
+System learns from:
+
+hiring outcomes
+employee performance
+HR decisions
+
+Continuously improves recommendations.
+
+🧠 PHASE 3 SUCCESS CRITERIA
+AI makes HR decisions autonomously (with logs)
+predictive analytics active
+voice/NL interface working
+HR workflows automated
+executive AI insights available
+⚠️ GLOBAL EXECUTION RULES
+DO NOT rebuild system from scratch
+DO NOT use mock data
+DO NOT leave partial fixes
+DO NOT skip failing endpoints
+ALWAYS prioritize correctness over speed
+ENSURE production-grade structure only
+📦 FINAL OUTPUT REQUIRED FROM BUILDER
+Full list of changes made
+Updated file structure
+Confirmation of 100% working APIs
+Confirmation of PostgreSQL migration
+Confirmation of security + RBAC
+Confirmation of AI engine + autonomy
+Final system status = A+ / Enterprise / Autonomous
+🚀 RESULT TARGET
+
+This system must evolve into:
+
+A fully autonomous, multi-tenant, AI-powered HR operating system capable of enterprise deployment and decision automation.

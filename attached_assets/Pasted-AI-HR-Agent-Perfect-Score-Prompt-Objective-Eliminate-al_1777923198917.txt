@@ -1,0 +1,123 @@
+AI HR Agent — Perfect Score Prompt
+Objective: Eliminate all audit caveats and raise production readiness from 62/100 to 100/100.
+
+🔒 Security (from 45 → 100)
+Implement password reset flow with email token + expiry.
+
+Add email verification on signup.
+
+Enforce CSRF tokens on all state‑changing requests.
+
+Require Zod validation for all 294 endpoints.
+
+Remove fallback "hr-agent-secret-key"; require env variable.
+
+Add 2FA/MFA for admin accounts.
+
+Add account lockout after repeated failed logins.
+
+Add custom Content Security Policy (CSP).
+
+Wrap all React routes in ErrorBoundary components.
+
+🧑‍💻 Code Quality (from 68 → 100)
+Add automated test suite:
+
+Unit tests for core utilities.
+
+API integration tests (auth, CRUD, AI functions).
+
+E2E tests for onboarding, HR workflows.
+
+Add frontend form validation with Zod across all 46 pages.
+
+Add server‑side pagination to all list endpoints.
+
+Introduce structured logging (Winston/Pino with request IDs).
+
+Integrate error tracking (Sentry).
+
+📊 Data Integrity (from 55 → 100)
+Populate all 35 empty tables with realistic seed/demo data.
+
+Add backup/restore strategy (pg_dump + scheduled jobs).
+
+Replace db:push with migration files.
+
+Add soft delete (deletedAt) for all tables.
+
+Ensure all CRUD ops log to activity_logs.
+
+🎨 Frontend UX (from 72 → 100)
+Add accessibility audit (WCAG 2.1 AA compliance).
+
+Implement ErrorBoundaries across major sections.
+
+Improve mobile navigation (group sidebar items).
+
+Add document.title/meta updates per page.
+
+Add keyboard navigation shortcuts.
+
+Build onboarding tour/first‑run guide.
+
+💰 Monetization Readiness (from 15 → 100)
+Implement multi‑tenancy: add organizationId to all tables.
+
+Add Stripe billing: pricing tiers, subscription management.
+
+Introduce feature gating (free/pro/enterprise).
+
+Add usage limits per tenant (employee count, API calls).
+
+Build super‑admin portal for tenant management.
+
+Add legal pages (ToS, Privacy Policy, DPA).
+
+Create guided onboarding flow for new orgs.
+
+Enable custom branding (logo/colors per tenant).
+
+Add full GDPR data export.
+
+Add SLA monitoring + uptime health checks.
+
+⚡ Scalability (from 40 → 100)
+Add server‑side pagination everywhere.
+
+Introduce caching layer (Redis).
+
+Add job queue (BullMQ/Redis) for AI/report tasks.
+
+Serve static assets via CDN.
+
+Enable horizontal scaling (Docker/Kubernetes).
+
+🧪 Testing (from 5 → 100)
+Add unit, integration, E2E, load tests.
+
+Install Jest/Playwright + CI pipeline.
+
+Cover auth, CRUD, AI functions, billing, onboarding.
+
+📚 Documentation (from 70 → 100)
+Generate Swagger/OpenAPI spec.
+
+Write User Guide (employee/admin workflows).
+
+Write Admin Guide (multi‑tenant setup).
+
+Add Deployment Guide (env vars, migrations, scaling).
+
+📌 Final Prompt (Copy‑Paste)
+Code
+Goal: Achieve 100/100 audit score (A+).
+
+Tasks:
+- Implement password reset, email verification, CSRF tokens, Zod validation, 2FA, account lockout, CSP, ErrorBoundaries.
+- Add automated tests (unit, API, E2E, load). Integrate structured logging + Sentry.
+- Populate all empty tables with seed data, add backup strategy, migrations, soft delete, full audit trail.
+- Improve UX: accessibility, mobile nav, page titles/meta, keyboard shortcuts, onboarding tour.
+- Add monetization: multi-tenancy, Stripe billing, pricing tiers, usage limits, super-admin portal, legal pages, onboarding flow, custom branding, GDPR export, SLA monitoring.
+- Scale: pagination, Redis caching, BullMQ job queue, CDN, Kubernetes.
+- Documentation: Swagger/OpenAPI, user/admin/deployment guides.

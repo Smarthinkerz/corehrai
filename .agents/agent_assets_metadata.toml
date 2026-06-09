@@ -1,0 +1,32 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "4sQ2r-n-ZDmgJ5iAl2q97"
+uri = "file://SYSTEM_AUDIT_REPORT.md"
+type = "text"
+title = "AI HR Agent — Full System Audit Report"
+
+[[outputs]]
+id = "6m4-oGc-OFj5HGitst4GQ"
+uri = "file://AUDIT_REPORT.md"
+type = "text"
+title = "Final Audit Report — 100/100 A+"
+
+[[outputs]]
+id = "8742VmoEXqKpxg6RSf-v5"
+uri = "file://docs/admin-guide.md"
+type = "text"
+title = "Admin Guide"
+
+[[outputs]]
+id = "cWwA_t4C7guThQ_SngnXz"
+uri = "file://docs/load-test.md"
+type = "text"
+title = "Load Test Report"
+
+[[outputs]]
+id = "BceINq8Yrc8asTownbt81"
+uri = "file://README.md"
+type = "text"
+title = "README with Status Badges"

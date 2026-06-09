@@ -1,0 +1,201 @@
+	
+Trigger
+Connection Status
+GitHub
+GitHub
+Access GitHub repositories, users, and organizations from your Replit apps		
+Active
+
+Manage
+Resend
+Resend
+Send transactional emails using the Resend API		
+Active
+
+Manage
+Sendgrid
+Sendgrid
+Send transactional emails using the SendGrid API		
+Active
+
+Manage
+AgentMail
+AgentMail
+Send, receive, and reply to emails using the AgentMail email inbox API.		
+
+Sign in
+Airtable
+Airtable
+List, retrieve, create, update, and delete records via REST API.		
+
+Sign in
+Asana
+Asana
+Read tasks and project data from Asana workspaces		
+
+Sign in
+Basecamp
+Basecamp
+Access projects, to-dos, messages, schedules, and documents		
+
+Sign in
+Box
+Box
+Access Box files and folders from Replit		
+
+Sign in
+Calendly
+Calendly
+View Calendly events and event types		
+
+Sign in
+Confluence
+Confluence
+Read users and groups, create and edit content in Confluence spaces		
+
+Sign in
+Discord
+Discord
+Access Discord guild information and user profiles		
+
+Sign in
+Dropbox
+Dropbox
+Access Dropbox files, content, and metadata		
+
+Sign in
+ElevenLabs
+ElevenLabs
+AI voice generation and text-to-speech		
+
+Sign in
+Figma
+Figma
+Allow Replit Agent to view and rapidly build your designs from Figma		
+
+Sign in
+GitLab
+GitLab
+Connect to GitLab to manage projects, issues, merge requests, and more.		
+
+Sign in
+Gmail
+Gmail
+Send, receive, and manage Gmail messages		
+
+Sign in
+Google Calendar
+Google Calendar
+Read and write Google Calendar events and settings		
+
+Sign in
+Google Docs
+Google Docs
+Create, read, and edit Google Docs		
+
+Sign in
+Google Drive
+Google Drive
+Access and manage Google Drive files and folders		
+
+Sign in
+Google Sheets
+Google Sheets
+Read and write data in Google Sheets		
+
+Sign in
+HubSpot
+HubSpot
+Access HubSpot CRM objects, contacts, and deals from Replit		
+
+Sign in
+Intercom
+Intercom
+Manage users, companies, and conversations in Intercom		
+
+Sign in
+Jira
+Jira
+View users and manage Jira work items and issues		
+
+Sign in
+Linear
+Linear
+Create and manage Linear issues, comments, and schedules		
+
+Sign in
+Mailchimp
+Mailchimp
+Manage audiences, campaigns, and ecommerce resources.		
+
+Sign in
+Microsoft OneDrive
+Microsoft OneDrive
+Access and manage OneDrive files and folders		
+
+Sign in
+Microsoft Outlook
+Microsoft Outlook
+Send and receive emails, manage Outlook calendar events		
+
+Sign in
+Notion
+Notion
+Read and write to Notion workspaces and pages		
+
+Sign in
+Productboard
+Productboard
+Manage products, features, notes, teams, and webhooks via API v2		
+
+Sign in
+RevenueCat
+RevenueCat
+Monetize your mobile apps built on Replit		
+
+Sign in
+SharePoint Online
+SharePoint Online
+Read, write, and manage SharePoint sites and documents		
+
+Sign in
+Slack
+Slack
+Send messages and interact with Slack workspaces		
+
+Sign in
+Squareup
+Squareup
+Connect to Squareup to authorize and manage seller accounts via OAuth2.		
+
+Sign in
+Teamwork
+Teamwork
+Manage projects, tasks, users, and more via its REST API.		
+
+Sign in
+Todoist
+Todoist
+Read and write to your Todoist tasks and projects		
+
+Sign in
+Twilio
+Twilio
+Send SMS messages and make voice calls using the Twilio API		
+
+Sign in
+Twitch
+Twitch
+Access live streams, user profiles, videos, clips, and more.		
+
+Sign in
+Typeform
+Typeform
+Connect to Typeform to create and manage forms and retrieve responses.		
+
+Sign in
+Zendesk
+Zendesk
+Access Zendesk users and support tickets from Replit		
+
+Sign in

@@ -1,0 +1,71 @@
+Objective: Preserve the 100/100 audit score by continuously validating, monitoring, and extending the platform.
+
+🔒 Security
+Keep Sentry SDK updated and monitor error dashboards.
+
+Rotate secrets regularly; enforce env‑only configuration.
+
+Run quarterly penetration tests and CSRF/2FA regression checks.
+
+🧑‍💻 Code Quality
+Maintain Vitest + Playwright test coverage; expand with new features.
+
+Enforce tsc --noEmit strict checks in CI.
+
+Keep structured logging consistent; monitor log volume and retention.
+
+📊 Data Integrity
+Ensure migration discipline: no direct db:push without reviewed migration files.
+
+Run nightly backup jobs and quarterly restore drills.
+
+Audit soft‑delete flows to confirm no data loss.
+
+🎨 Frontend UX
+Re‑run WCAG accessibility audits with each major UI update.
+
+Keep onboarding tour updated as features evolve.
+
+Monitor mobile responsiveness across new pages/components.
+
+💰 Monetization
+Validate Tap Payments webhooks on every billing cycle.
+
+Keep pricing tiers aligned with business strategy.
+
+Expand feature gating as enterprise features grow.
+
+⚡ Scalability
+Run k6 load tests before major releases.
+
+Keep Docker/Kubernetes manifests updated.
+
+Monitor Neon/PostgreSQL connection pooling and cache hit rates.
+
+🧪 Testing
+Enforce CI/CD pipelines: all tests must pass before deploy.
+
+Expand E2E coverage as new modules are added.
+
+Add load/stress tests for AI‑intensive endpoints.
+
+📚 Documentation
+Keep Swagger/OpenAPI spec auto‑generated and versioned.
+
+Update admin guide with new tenant features.
+
+Maintain audit reports as living documents.
+
+📌 Final Prompt (Copy‑Paste)
+Code
+Goal: Sustain 100/100 A+ audit score for AI HR Agent.
+
+Tasks:
+- Monitor and update Sentry, secrets, and security middleware.
+- Maintain full test coverage (Vitest + Playwright + k6).
+- Enforce strict TypeScript checks in CI/CD.
+- Run backups, migrations, and restore drills regularly.
+- Keep frontend accessible, responsive, and guided.
+- Validate billing webhooks and feature gating.
+- Scale with Docker/Kubernetes and monitor caching/pooling.
+- Keep Swagger docs, admin guide, and audit reports current.

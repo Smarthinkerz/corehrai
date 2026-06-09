@@ -1,0 +1,570 @@
+COREHR AI — ENTERPRISE HARDENING & A+ CERTIFICATION PROMPT
+
+Role:
+
+You are operating as:
+
+Principal Software Architect
+Principal TypeScript Engineer
+Senior Platform Reliability Engineer
+Senior Security Engineer
+Enterprise HR SaaS Systems Architect
+Senior DevOps Engineer
+
+Mission:
+
+Elevate CoreHR AI from ~88/100 production readiness to enterprise-grade A+ (100/100).
+
+Current runtime is stable.
+
+Do NOT redesign stable systems.
+
+Do NOT remove existing functionality.
+
+Primary objective:
+
+Eliminate build blockers.
+
+Eliminate schema drift.
+
+Strengthen observability.
+
+Automate quality enforcement.
+
+Achieve enterprise deployment readiness.
+
+Success target:
+
+Zero TypeScript compile failures
+Zero schema drift
+Fully reproducible builds
+Full accessibility automation
+Production observability
+CI/CD enforcement
+Deployment resilience
+Enterprise SaaS standards
+
+NON-NEGOTIABLE RULES
+
+No mock functionality
+No placeholder implementations
+No ignored build errors
+No ts-ignore unless justified
+No implicit any
+No unsafe unknown
+No runtime regressions
+No schema-route mismatches
+Strict typing everywhere
+Production-grade fixes only
+PHASE 1 — FIX STRICT TYPESCRIPT BUILD BLOCKERS (CRITICAL)
+
+Current:
+
+10 TypeScript errors blocking strict build.
+
+Goal:
+
+Run:
+
+tsc --noEmit
+
+Fix exact issues:
+
+meetingTracker.ts
+
+Current:
+
+managerId
+
+Required:
+
+manager
+
+Validate schema alignment.
+
+offerLetters.ts
+
+Current:
+
+Missing:
+
+templateType
+
+Requirements:
+
+Add missing field.
+
+Align:
+
+Zod schema
+
+Database model
+
+Insert types
+
+API validation
+
+payroll.ts
+
+Current mismatch:
+
+basicSalary
+
+vs
+
+baseSalary
+
+Requirements:
+
+Normalize naming.
+
+Single source of truth.
+
+Update:
+
+schema
+insert types
+validation
+frontend usage
+
+Prevent future field drift.
+
+peerRecognition.ts
+
+Current:
+
+optional category not coerced correctly.
+
+Requirements:
+
+Align optional → required conversion.
+
+Validate Zod inference.
+
+performanceReviews.ts
+
+Current mismatches:
+
+reviewPeriod
+
+vs
+
+period
+
+feedbackFrom
+
+vs
+
+relationship
+
+Requirements:
+
+Normalize naming.
+
+Update:
+
+DB schema
+DTO types
+frontend payload
+validation layer
+resignationRisk.ts
+
+Current:
+
+rating select mismatch
+
+Map iteration typing issue
+
+Requirements:
+
+Resolve type incompatibility.
+
+Enforce iterable typing.
+
+vite.ts
+
+Current:
+
+allowedHosts boolean mismatch.
+
+Do NOT patch with unsafe casts.
+
+Use correct Vite type.
+
+If framework-generated:
+
+Document exception.
+
+Requirements:
+
+Enable:
+
+{
+"strict": true,
+"noImplicitAny": true,
+"exactOptionalPropertyTypes": true,
+"noUncheckedIndexedAccess": true
+}
+
+Target:
+
+0 compile failures.
+
+PHASE 2 — BUILD PIPELINE ENFORCEMENT
+
+Implement CI quality gate.
+
+Pipeline:
+
+Step 1
+
+Lint
+
+Step 2
+
+Type check
+
+tsc --noEmit
+
+Step 3
+
+Unit tests
+
+Step 4
+
+Integration tests
+
+Step 5
+
+API smoke tests
+
+Required endpoints:
+
+/api/health
+auth flow
+email verification
+password reset
+payroll APIs
+performance review APIs
+organization APIs
+
+Step 6
+
+Accessibility tests
+
+Step 7
+
+Build validation
+
+Step 8
+
+Deploy approval
+
+Rules:
+
+Fail deployment on ANY failure.
+
+No deployment bypass.
+
+PHASE 3 — ACCESSIBILITY AUTOMATION
+
+Current:
+
+Accessibility validated manually.
+
+Goal:
+
+Automated accessibility enforcement.
+
+Add:
+
+axe-core.
+
+Add Lighthouse CI.
+
+Requirements:
+
+Validate:
+
+ARIA coverage
+keyboard navigation
+contrast ratios
+skip links
+modal accessibility
+focus trapping
+
+Targets:
+
+Accessibility:
+
+95+
+
+Automated enforcement in CI.
+
+PHASE 4 — OBSERVABILITY HARDENING
+
+Current:
+
+Sentry not configured.
+
+Implement:
+
+Sentry production monitoring.
+
+Configure:
+
+SENTRY_DSN
+
+Capture:
+
+Frontend:
+
+render failures
+hydration issues
+component crashes
+
+Backend:
+
+route exceptions
+database failures
+integration failures
+
+Track:
+
+Metrics:
+
+API latency p50
+API latency p95
+DB latency
+auth failures
+failed emails
+OpenAI latency
+Slack latency
+Zoom latency
+
+Add:
+
+Correlation IDs.
+
+Structured JSON logs.
+
+Distributed tracing.
+
+PHASE 5 — SECURITY CERTIFICATION
+
+Current security strong.
+
+Push to enterprise level.
+
+Run:
+
+npm audit
+
+Run dependency security scan.
+
+Validate:
+
+OWASP Top 10 coverage.
+
+Requirements:
+
+Add:
+
+dependency vulnerability gate
+secret scanning
+CSP validation tests
+CSRF regression tests
+rate limiter verification tests
+session fixation tests
+JWT/session expiration tests
+permission boundary tests
+
+Validate:
+
+Organization tenancy isolation.
+
+Cross-org access attempts must fail.
+
+PHASE 6 — DATABASE HARDENING
+
+Audit:
+
+62 tables.
+
+Requirements:
+
+Validate:
+
+Foreign key indexes.
+
+Missing indexes.
+
+Slow query risk.
+
+Run:
+
+EXPLAIN ANALYZE.
+
+Optimize:
+
+High-volume HR queries:
+
+employee lookup
+audit logs
+performance reviews
+payroll history
+meetings
+
+Requirements:
+
+Migration reproducibility.
+
+Fresh database deploy must fully reconstruct schema.
+
+PHASE 7 — DEMO DATA EXCELLENCE
+
+Current:
+
+29 optional tables empty.
+
+Goal:
+
+Executive-demo quality.
+
+Seed:
+
+workforce forecasting
+digital twin scenarios
+AI copilots
+shift swap workflows
+recognition history
+HR analytics trends
+
+Requirements:
+
+Demo data realistic.
+
+Cross-linked.
+
+Visually impressive.
+
+No placeholder lorem ipsum.
+
+PHASE 8 — BILLING PRODUCTION READINESS
+
+Current:
+
+Stripe/Tap test mode.
+
+Requirements:
+
+Validate production billing readiness.
+
+Implement:
+
+Production verification checklist:
+
+webhook validation
+retry handling
+failed payment flow
+invoice generation
+subscription lifecycle validation
+
+Do NOT switch live keys.
+
+Only certify readiness.
+
+PHASE 9 — PERFORMANCE CERTIFICATION
+
+Targets:
+
+API p95:
+
+<200ms
+
+Health endpoint:
+
+<50ms
+
+Page load:
+
+<2 seconds
+
+Database:
+
+<50ms latency
+
+Targets:
+
+Lighthouse:
+
+Performance >95
+
+Accessibility >95
+
+SEO >95
+
+Best Practices >95
+
+CLS:
+
+<0.1
+
+LCP:
+
+<2s
+
+INP:
+
+<200ms
+
+PHASE 10 — PREVENT FUTURE DRIFT
+
+Build repository guardrails.
+
+Implement:
+
+Route drift detection.
+
+Schema drift detection.
+
+Unused component detection.
+
+Duplicate route detection.
+
+Dead import detection.
+
+Strict type regression detection.
+
+Requirements:
+
+Technical debt must not silently reappear.
+
+FINAL DELIVERABLE
+
+Produce report:
+
+TS errors before vs after
+CI protections added
+Security improvements
+Accessibility improvements
+Performance improvements
+Database optimizations
+Remaining risks
+Final readiness score
+
+Success criteria:
+
+100%
+
+0 TypeScript errors
+
+0 schema drift
+
+0 build blockers
+
+Enterprise-grade observability
+
+Enterprise-grade deployment reliability
+
+Do not stop until all targets are achieved.

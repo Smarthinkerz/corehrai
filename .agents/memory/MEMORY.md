@@ -1,0 +1,3 @@
+- [CoreHR schema column pitfalls](corehr-schema-pitfalls.md) — many table column names differ from intuition; always grep schema before seeding.
+- [DB seed approach](db-seed-approach.md) — use `node << 'ENDSCRIPT'` heredoc for all DB ops; `npm run db:push` is interactive and blocks.
+- [Candy color palette](candy-palette.md) — corporate refinement spec: purple→indigo, cyan→sky, pink→rose; semantic exceptions apply.

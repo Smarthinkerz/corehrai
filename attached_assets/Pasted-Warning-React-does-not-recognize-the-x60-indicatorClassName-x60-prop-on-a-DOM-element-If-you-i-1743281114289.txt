@@ -1,0 +1,42 @@
+Warning: React does not recognize the &#x60;indicatorClassName&#x60; prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase &#x60;indicatorclassname&#x60; instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at div
+    at https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-2JFZEFXJ.js?v=5670ed4d:41:13
+    at Provider (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-progress.js?v=5670ed4d:30:15)
+    at https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-progress.js?v=5670ed4d:90:7
+    at _c (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/components/ui/progress.tsx:21:11)
+    at div
+    at div
+    at div
+    at div
+    at _c9 (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/components/ui/card.tsx:114:12)
+    at div
+    at _c (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/components/ui/card.tsx:20:11)
+    at EmployeeInsights (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/components/dashboard/EmployeeInsights.tsx:25:37)
+    at div
+    at div
+    at Dashboard (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/pages/Dashboard.tsx:281:37)
+    at Route (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=5670ed4d:323:16)
+    at Switch (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=5670ed4d:379:17)
+    at main
+    at div
+    at div
+    at AppLayout (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/src/components/layout/AppLayout.tsx:22:22)
+    at Router
+    at QueryClientProvider (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=5670ed4d:2875:3)
+    at App
+API Request Error: 
+Error {}
+
+Error creating task: 
+Error {}
+
+API Request Error: 
+Error {}
+
+Error updating task: 
+Error {}
+
+at t.value (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://eca98762-83c2-447d-b2c8-07162fc19e6d-00-3mpuk6tv5gst6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400

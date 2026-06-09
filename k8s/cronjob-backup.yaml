@@ -1,0 +1,41 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: hragent-backup
+  namespace: hragent
+spec:
+  schedule: "0 3 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: backup
+              image: ghcr.io/your-org/ai-hr-agent-backup:latest
+              command: ["/opt/hragent/scripts/backup-verify.sh"]
+              env:
+                - name: DATABASE_URL
+                  valueFrom:
+                    secretKeyRef:
+                      name: hragent-secrets
+                      key: DATABASE_URL
+                - name: BACKUP_DIR
+                  value: /var/backups/hragent
+                - name: BACKUP_S3_URI
+                  valueFrom:
+                    secretKeyRef:
+                      name: hragent-secrets
+                      key: BACKUP_S3_URI
+                      optional: true
+              volumeMounts:
+                - name: backup-volume
+                  mountPath: /var/backups/hragent
+          volumes:
+            - name: backup-volume
+              persistentVolumeClaim:
+                claimName: hragent-backups

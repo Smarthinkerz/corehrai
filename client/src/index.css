@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Motion tokens ──────────────────────────────────────────── */
+:root {
+  --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-counter:  cubic-bezier(0.16, 1, 0.3,  1);
+  --ease-exit:     cubic-bezier(0.36, 0, 1,    1);
+  --dur-fast:   150ms;
+  --dur-normal: 240ms;
+  --dur-slow:   400ms;
+}
+
+/* Page entrance animation — zero CLS (transform/opacity only) */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+main[role="main"] {
+  animation: page-enter var(--dur-normal) var(--ease-entrance) both;
+}
+
+/* Stagger list-item reveal — use class="stagger-item" with nth-child delays */
+@keyframes stagger-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card entrance */
+@keyframes card-enter {
+  from { opacity: 0; transform: scale(0.97) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Reduced-motion: honour system preference — override all durations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+}
+
+@layer utilities {
+  /* Tabular numbers — apply to every numeric display */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  /* Animate entrance */
+  .animate-entrance {
+    animation: page-enter var(--dur-normal) var(--ease-entrance) both;
+  }
+
+  /* Stagger children — pair with nth-child delay overrides */
+  .stagger-item {
+    animation: stagger-in var(--dur-slow) var(--ease-entrance) both;
+  }
+  .stagger-item:nth-child(1)  { animation-delay:  0ms; }
+  .stagger-item:nth-child(2)  { animation-delay: 40ms; }
+  .stagger-item:nth-child(3)  { animation-delay: 80ms; }
+  .stagger-item:nth-child(4)  { animation-delay:120ms; }
+  .stagger-item:nth-child(5)  { animation-delay:160ms; }
+  .stagger-item:nth-child(6)  { animation-delay:200ms; }
+  .stagger-item:nth-child(7)  { animation-delay:240ms; }
+  .stagger-item:nth-child(8)  { animation-delay:280ms; }
+  .stagger-item:nth-child(n+9){ animation-delay:320ms; }
+
+  .animate-card {
+    animation: card-enter var(--dur-normal) var(--ease-entrance) both;
+  }
+}
+
+/* ── Custom styles for wellness categories ─────────────────── */
+.category-mental, 
+.category-financial, 
+.category-social, 
+.category-other {
+  font-size: 1.1rem !important; /* Increased from 0.875rem (25% larger) */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+/* Special fix for Physical Health category */
+.category-physical {
+  font-size: 1.1rem !important; /* Increased from 0.875rem (25% larger) */
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Custom scrollbar styling */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4f46e5 #e5e7eb;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 20px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4f46e5;
+    border-radius: 20px;
+    border: 2px solid #e5e7eb;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #4338ca;
+  }
+}
+
+@layer components {
+  .custom-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #888 #f1f1f1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #f1f1f1;
+    display: block;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 6px;
+    border: 2px solid #f1f1f1;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+  }
+  
+  /* Force scrollbar display */
+  .custom-scrollbar::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: block !important;
+  }
+  
+  /* Always show scrollbar */
+  .scrollbar-always {
+    overflow-y: scroll !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #555 #f1f1f1 !important;
+    border: 1px solid #aaa !important;
+    padding-right: 4px !important;
+    background-color: #f9f9f9 !important;
+    min-height: 50px !important;
+  }
+  
+  .scrollbar-always::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .scrollbar-always::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+    border: 1px solid #ddd !important;
+    display: block !important;
+  }
+  
+  .scrollbar-always::-webkit-scrollbar-thumb {
+    background-color: #555 !important;
+    border-radius: 6px !important;
+    border: 2px solid #f1f1f1 !important;
+    display: block !important;
+    min-height: 30px !important;
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #f1f1f1;
+  }
+  
+  /* Custom scrollbar implementation - ENHANCED FOR VISIBILITY */
+  .custom-scrollbar-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-scrollbar-content {
+    height: 100%;
+    width: calc(100% - 14px); /* Wider to accommodate larger scrollbar */
+    overflow-y: auto;
+    padding-right: 20px; /* Hide browser scrollbar */
+    box-sizing: content-box;
+    padding-left: 4px;
+  }
+  
+  .custom-scrollbar-track {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px; /* Wider track */
+    height: 100%;
+    background-color: #e0e0e0;
+    border-left: 2px solid #bbb;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    z-index: 50; /* Higher z-index to ensure visibility */
+  }
+  
+  .custom-scrollbar-thumb {
+    position: absolute;
+    right: 0;
+    width: 14px; /* Wider thumb */
+    background-color: #000; /* Black for maximum contrast */
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #000;
+    min-height: 50px; /* Taller minimum height */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    z-index: 51; /* Higher z-index to ensure visibility */
+  }
+  
+  .custom-scrollbar-thumb:hover {
+    background-color: #333; /* Slightly lighter on hover */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+
+  /* Compact mode support */
+  html.compact-mode {
+    font-size: 14px;
+  }
+
+  .compact-mode .card {
+    @apply p-2;
+  }
+
+  .compact-mode .container {
+    @apply p-3;
+  }
+
+  .compact-mode button {
+    @apply py-1 px-2 text-sm;
+  }
+
+  .compact-mode h1 {
+    @apply text-2xl;
+  }
+
+  .compact-mode h2 {
+    @apply text-xl;
+  }
+
+  .compact-mode h3 {
+    @apply text-lg;
+  }
+
+  .compact-mode p {
+    @apply text-sm;
+  }
+
+  .compact-mode .px-4 {
+    @apply px-2;
+  }
+  
+  .compact-mode .py-4 {
+    @apply py-2;
+  }
+
+  .compact-mode .p-4 {
+    @apply p-2;
+  }
+
+  .compact-mode .gap-4 {
+    @apply gap-2;
+  }
+
+  .compact-mode .space-y-4 {
+    @apply space-y-2;
+  }
+
+  .compact-mode .space-x-4 {
+    @apply space-x-2;
+  }
+
+  .compact-mode .my-4 {
+    @apply my-2;
+  }
+
+  .compact-mode .mx-4 {
+    @apply mx-2;
+  }
+
+  .compact-mode .m-4 {
+    @apply m-2;
+  }
+
+  /* Animations control */
+  .reduce-animations * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+
+  /* RTL Support for Arabic */
+  [dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  [dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  [dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  [dir="rtl"] .pl-3 {
+    padding-left: 0;
+    padding-right: 0.75rem;
+  }
+
+  [dir="rtl"] .pr-3 {
+    padding-right: 0;
+    padding-left: 0.75rem;
+  }
+}

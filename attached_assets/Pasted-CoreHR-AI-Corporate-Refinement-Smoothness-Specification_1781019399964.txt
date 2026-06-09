@@ -1,0 +1,73 @@
+CoreHR AI — Corporate Refinement & Smoothness Specification
+The most mature app in the portfolio — refine, add smoothness, close the real gaps; don't repaint
+CoreHR AI is already enterprise-grade where it matters: 91/100 audit, security 100/100, RBAC/CSRF/org-scope, 336 endpoints, 100% tests, 0 CVEs, and a restrained royal-blue (#2563EB) / Inter professional theme. This spec is deliberately narrow: keep the core, add the missing smoothness layer, tighten consistency, and close the audit's genuine gaps. No wholesale redesign.
+
+Decisions: keep the royal-blue professional theme; add smoothness (entirely missing today); reconcile landing vs core consistency; consume the shared SmarThinkerz brand layer; fix the real functional gaps from the audit.
+
+
+A — What's already right (keep, don't touch)
+Royal-blue restrained theme, Inter, 8px radius, clean cards (white, rounded-xl, shadow-sm, slate border), shadcn forms + Zod, RBAC/CSRF/rate-limit/org-scope, structured Pino logging, pagination, 105 indexes. This is genuine corporate-grade foundation. No changes.
+
+B — Smoothness layer (the main gap — entirely missing from the audit)
+The audit doesn't mention motion at all. Add the discipline:
+
+Motion tokens: easing cubic-bezier(0.22,1,0.36,1) (entrances) / cubic-bezier(0.16,1,0.3,1) (counters); springs snappy {280,26} / smooth {180,30}; interactive ≤240ms.
+Transform/opacity only; will-change then remove; never animate layout/box-shadow in loops.
+Optimistic UI on the high-frequency HR actions — attendance clock-in/out, task completion, approvals, recognition, 1:1 scheduling — reflect instantly, reconcile after, roll back on failure.
+Layout-matched skeletons (the audit notes sparse data makes pages feel empty — skeletons + good empty states fix the perceived emptiness) instead of spinners; zero CLS.
+Route transitions (fade/shared-element), nothing hard-cuts; staggered list reveals ≤40ms/item.
+Reduced-motion fallback: instant states, animated counters jump to value.
+Tabular numbers on every numeric display — payroll, headcount, attendance %, review scores, survey results, KPI cards, the landing stat counters. Critical for an HR/finance product; missing today.
+Target 60fps under 4× CPU throttle (desktop + mobile).
+
+
+C — Corporate consistency refinements (small, high-signal)
+
+Landing vs core split. The core app is restrained royal-blue + Inter; the landing page uses Lato + four gradient card tones (blue/purple/cyan/pink) — more consumer than the app. For a corporate/enterprise HR buyer, align: pull the landing toward the core's restraint (single accent, fewer candy gradients) or at minimum tokenize those four tones so they're deliberate, not ad-hoc. [token/CSS]
+Sidebar active-state contrast (audit's own design note): the active item relies only on a left-border. Add a subtle background fill so the current section is obvious. [token/CSS]
+Dark mode — appearance: "system" is already wired in theme.json; just add the toggle in Settings. Low effort, expected by enterprise users. [token/CSS]
+Hub token reconciliation — CoreHR's #2563EB royal blue vs the hub's other blues (CRM #0ea5e9, stock teal, BrainPower indigo). Consume the shared brand-tokens.css; document royal blue as CoreHR's accent within it so the hub family is coherent. [token/CSS]
+
+
+D — Genuine functional gaps (from the audit — close these)
+
+Billing keys are placeholders (F6) — LAUNCH BLOCKER. Checkout/upgrade returns 400. Set live Stripe/Tap keys in Secrets and verify one end-to-end transaction before charging anyone. [token/CSS] (config) — blocking.
+employees.manager is a text name, not an FK (F7). Org chart, reporting lines, and overdue-meeting logic are string-matched — fragile and wrong at scale. Migrate to a self-referential managerId integer FK so hierarchy works properly. This affects core HR features (org chart, reporting). [structural]
+Sparse seed data (F3/F8). Employees = 3, several tables empty — features look broken in a demo. Seed 30+ employees and populate performance_reviews, peer_recognitions, offer_letter_templates, payroll_records, survey_responses. Essential before any demo or launch. [component]
+Sentry DSN unset (F2). No production error capture. Paste the DSN into Secrets — zero code cost. [token/CSS]
+No CI gate (F4). Add .github/workflows/ci.yml running tsc --noEmit && vitest run so the 100% test pass and 0 TS errors don't silently regress. [component]
+Boot-time env validation (F9 suggestion). z.object({DATABASE_URL, SESSION_SECRET}).parse(process.env) in server/index.ts so misconfigured deploys fail loudly. [token/CSS]
+Low: the server/vite.ts:42 TS error is an upstream template issue, runtime-safe — leave it.
+
+
+E — HR-domain corporate notes
+This app sells to People/HR teams; corporate credibility = data density + reporting + governance, most of which exists. Polish:
+
+Dense, sortable data tables for Employees, Payroll, Attendance, Candidates — tabular numbers, bulk actions, export (you have Report Builder + pagination; ensure export is everywhere it's needed). [component]
+Org chart depends on the manager FK (D2) — fix that first or the tree is unreliable.
+GDPR Tools + Compliance Reports + audit log are strong corporate signals — surface them prominently for enterprise buyers; they're often the procurement checklist items.
+Reporting/export (PDF/CSV) on every list and analytics view for HR/leadership.
+
+
+F — Launch readiness (you're in launch mode)
+Blockers before real/paying users:
+
+Live billing keys + one verified transaction (D1).
+Seed data so the product isn't empty on first login (D3).
+Sentry on, so you see errors when real users hit them (D4).
+Safe to iterate post-launch: smoothness layer (B), dark mode, landing consistency, manager FK migration (do soon — it affects org features — but not strictly launch-blocking if org chart is secondary at launch), CI.
+Unlike the stock app, CoreHR has no financial-signals regulatory exposure — it's standard B2B SaaS, lower compliance bar. The main pre-launch must-do is just: billing works + data present + errors tracked.
+
+
+G — Priority roadmap
+P0 — Launch blockers (fast): live billing keys + test txn · seed data · Sentry DSN · env validation. [token/CSS]/[component]
+P1 — Smoothness + the org-data fix: smoothness layer + tabular numbers (B) · managerId FK migration (D2) · sidebar active-state + dark mode toggle (C2/C3). [component]/[token/CSS]
+P2 — Consistency + hardening: landing↔core consistency + hub tokens (C1/C4) · CI workflow · Lighthouse pass post-deploy · dense tables + export polish (E). [component]
+
+H — "Definition of done"
+
+Billing works end-to-end; product seeded so every page renders content; Sentry capturing errors; env validated at boot.
+Smoothness layer present: optimistic UI on HR actions, layout-matched skeletons, transform/opacity-only motion at 60fps, tabular numbers everywhere, reduced-motion fallback.
+managerId FK live; org chart/reporting hierarchical.
+Landing aligned with core restraint; dark mode toggle; visible active nav state; hub-reconciled tokens.
+CI gate prevents TS/test regressions.

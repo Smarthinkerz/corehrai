@@ -1,0 +1,286 @@
+RONT PAGE CONTENT — AI HR PLATFORM
+🔷 HERO SECTION (Above the Fold)
+Headline
+
+Your Entire HR Department. Powered by AI.
+
+Subheadline
+
+From hiring to payroll, performance to predictive insights — manage, automate, and scale your workforce with one intelligent platform.
+
+CTA Buttons
+Start Free
+Book Demo
+Hero Visual (CRITICAL)
+A 3D futuristic dashboard UI
+Floating panels showing:
+Employee analytics
+Org chart
+AI chatbot interaction
+Subtle animation (live data flowing)
+
+👉 Style:
+
+Dark + neon accents (AI feel)
+Glassmorphism UI panels
+🔷 TRUST / SOCIAL PROOF
+Text:
+
+Trusted by modern teams building the future of work
+
+Visual:
+Logos (placeholder if early stage)
+Metrics:
+“10,000+ Employees Managed”
+“95% HR Tasks Automated”
+“3x Faster Hiring”
+🔷 CORE VALUE SECTION
+Headline:
+
+Everything HR Needs. One Intelligent Platform.
+
+Layout:
+
+Grid (3–4 columns)
+
+Cards:
+🧑‍💼 Core HR Operations
+
+Manage employees, departments, org charts, and self-service — all in one place.
+
+👉 Image:
+
+Dashboard + employee profile UI
+📋 Recruitment & Hiring
+
+Track candidates, automate interviews, and hire smarter with AI scoring.
+
+👉 Image:
+
+Pipeline Kanban board (ATS style)
+🚀 Onboarding
+
+Deliver seamless onboarding experiences with automated workflows and buddy systems.
+
+👉 Image:
+
+Step-based onboarding flow UI
+🧠 AI Intelligence Layer
+
+Predict attrition, analyze sentiment, and deploy AI copilots across HR.
+
+👉 Image:
+
+AI brain / neural visualization + analytics overlay
+🔷 AI SUPERPOWERS (Differentiator Section)
+Headline:
+
+Not Just HR Software — An AI Decision Engine
+
+Content Blocks:
+🤖 HR Chatbot
+
+Instant answers for employees 24/7
+
+📊 Sentiment & Emotion AI
+
+Understand how your workforce truly feels
+
+⚠️ Resignation Risk Prediction
+
+Identify at-risk employees before they leave
+
+🧬 Digital Twins
+
+Simulate employee behavior and skill growth
+
+📈 Workforce Planning
+
+Forecast hiring needs and optimize costs
+
+Visual:
+3D Neural Brain + Data Streams
+Animated prediction graphs
+🔷 INTERACTIVE PLATFORM SHOWCASE
+Headline:
+
+See the Platform in Action
+
+Sections:
+📊 Dashboard
+
+Real-time KPIs, activity feeds, and insights
+
+🌐 Org Chart
+
+Interactive reporting hierarchy
+
+🎓 Learning + VR Training
+
+Immersive workforce development
+
+💰 Payroll & Attendance
+
+Automated payroll, shifts, and tracking
+
+Visual:
+Product UI mockups (clean SaaS style)
+Optional: short looping demo video
+🔷 PERFORMANCE & GROWTH
+Headline:
+
+Build High-Performing Teams
+
+Performance reviews (360°)
+Career pathing
+Internal talent marketplace
+Learning & development
+
+👉 Image:
+
+Career progression ladder visualization
+🔷 ENGAGEMENT & CULTURE
+Headline:
+
+Create a Workplace People Love
+
+Surveys & eNPS
+Recognition systems
+Internal communications
+Knowledge base
+
+👉 Image:
+
+Social feed-style interface (recognition + posts)
+🔷 SECURITY & COMPLIANCE
+Headline:
+
+Enterprise-Grade Security & Compliance
+
+GDPR, SOX, audit logs
+Role-based access control
+2FA authentication
+Secure infrastructure
+
+👉 Image:
+
+Shield + lock + data visualization
+🔷 INTEGRATIONS
+Headline:
+
+Connect Your Entire Stack
+
+Slack
+Zoom
+Google
+OpenAI
+Payment systems
+
+👉 Image:
+
+Integration logos orbiting platform
+💰 PRICING SECTION (HIGH-CONVERSION)
+Headline:
+
+Simple, Scalable Pricing
+
+🟢 FREE PLAN — “Starter”
+
+$0 / month
+
+For:
+
+Small teams getting started
+
+Includes:
+Employee directory (limited)
+Basic dashboard
+Self-service portal
+Attendance tracking
+1 admin
+Up to 10 employees
+🔵 PRO PLAN — “Growth”
+
+$12 / user / month
+
+For:
+
+Growing companies
+
+Includes:
+Everything in Free +
+Recruitment & ATS
+Onboarding workflows
+Payroll & shift management
+Performance reviews
+Engagement tools
+Basic AI chatbot
+Analytics dashboards
+🟣 ENTERPRISE PLAN — “AI Intelligence”
+
+$29 / user / month
+
+For:
+
+AI-driven organizations
+
+Includes:
+Everything in Pro +
+Sentiment & Emotion AI
+Resignation risk prediction
+Workforce planning
+Digital twins
+AI learning recommendations
+Advanced analytics
+API access
+Priority support
+⚫ ELITE PLAN — “Future of Work”
+
+Custom Pricing
+
+For:
+
+Large enterprises / governments
+
+Includes:
+Everything in Enterprise +
+VR training modules
+Custom AI models
+Dedicated infrastructure
+Advanced compliance (GDPR, SOX, etc.)
+White-label branding
+Dedicated account manager
+CTA:
+Start Free
+Contact Sales
+🔷 FINAL CTA SECTION
+Headline:
+
+Transform Your Workforce with AI
+
+Subtext:
+
+Join the next generation of intelligent organizations
+
+Buttons:
+Get Started
+Book Demo
+Visual:
+Futuristic workplace + AI overlay
+🎨 DESIGN SYSTEM (IMPORTANT)
+Colors:
+Primary: Deep blue / black
+Accent: Neon blue / purple
+Secondary: White + soft gray
+Typography:
+Bold modern (SaaS style)
+Large headings, minimal clutter
+UX Feel:
+Smooth animations
+Hover effects
+Micro-interactions
+⚡ POSITIONING SUMMARY
+
+This platform should feel like:
+
+“Not an HR tool… but an AI-powered workforce operating system”

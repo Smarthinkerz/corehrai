@@ -1,0 +1,118 @@
+Development Prompt for WealthSync AI:
+
+Build an AI-powered business intelligence and expansion platform called WealthSync AI, designed for both individual users and companies, with two tiers: Normal (Basic) and Premium (Subscription Plus). The platform must offer an intuitive dashboard with real-time AI assistance, global/local insights, interactive visualization tools, and automation features.
+
+👤 User Types & Subscriptions
+Include two main account types: Individual Users and Companies.
+
+For each, enable two subscription levels: Normal (Basic) and Premium (Subscription Plus).
+
+Ensure clear onboarding flows that adapt based on user type and subscription level.
+
+🔹 Features for Normal (Basic) Subscribers
+🧍 Individual Users:
+Allow limited business matchmaking, connecting users to up to 3 relevant partners or investors per month using AI filters based on goals, region, and sector.
+
+Integrate a smart AI chatbot assistant to answer business questions, guide through compliance, and offer growth tips.
+
+Display basic country insights such as market size, current growth rate, and general startup climate.
+
+Provide basic access to funding and grant discovery, showing limited but relevant opportunities based on profile.
+
+Enable AI-powered task assistant to help with simple reminders, schedules, and task summaries.
+
+Include a basic interactive business intelligence map:
+
+Let users hover and click on countries to view key industry highlights.
+
+Show startup activity levels and investment hubs using colored markers.
+
+Offer read-only access to a knowledge graph, allowing exploration of relationships between industries, companies, and sectors.
+
+Provide access to 3 downloadable legal templates such as NDA, partnership agreement, or founder agreement.
+
+Limit AI credit usage for tasks, chat, document generation, and map interactions.
+
+🏢 Companies:
+Allow companies to create a profile including sector, size, market, and goals.
+
+Display a basic market potential report that outlines estimated opportunity sizes by location.
+
+Include a compliance checklist per selected country or region.
+
+Provide access to the interactive map (basic company view) showing partner zones, regulatory areas, and competitor density.
+
+🔸 Features for Premium (Subscription Plus) Subscribers
+🧍 Individual Users:
+Enable unlimited business matchmaking with AI-filtered recommendations for strategic partnerships, investors, accelerators, and service providers.
+
+Provide real-time market sentiment analysis by analyzing news, social media, and economic indicators using NLP to detect trends and risks.
+
+Generate a personalized growth roadmap that outlines step-by-step expansion strategies tailored to industry, country, and stage.
+
+Integrate automated legal guidance and document generation, including contract templates adapted by region and business type.
+
+Enable real-time grant and funding alerts tailored to the user’s sector and country, with weekly AI-curated recommendations.
+
+Add AI-powered risk assessments with data visualization tools predicting ROI, volatility, and potential pitfalls.
+
+Include a smart assistant bot for task automation: auto-scheduling meetings, summarizing PDFs, responding to emails.
+
+Offer multi-language AI assistant with support for English, Arabic, Mandarin, French, Spanish, and German.
+
+Allow users to build a custom knowledge graph of their business ecosystem and download it for reports or pitch decks.
+
+Upgrade to a premium interactive map with:
+
+Dynamic heatmap overlays for funding, investment activity, startup density, and policy friendliness.
+
+Filters by sector, region, funding stage, tax zones, and regulations.
+
+Real-time clickable layers revealing partnerships, major players, legal climate, and upcoming events.
+
+Drill-down capability from continent to city level with live AI insights.
+
+🏢 Companies:
+Provide a multi-user dashboard for teams to manage business intelligence, chat with AI, assign tasks, and monitor activity.
+
+Integrate AI-generated smart contracts secured via blockchain with auto-filling capabilities.
+
+Offer a market expansion AI advisor suggesting best cities or countries to expand based on competition, funding, and demand.
+
+Allow companies to build and export stakeholder knowledge graphs, mapping out clients, suppliers, competitors, and partners.
+
+Enable premium interactive map tools including:
+
+Enterprise filters for regulations, tax zones, and startup clusters.
+
+Competitive overlays to identify white-space or over-saturated areas.
+
+Ability to annotate, export, and integrate map data into reports and dashboards.
+
+Include an Investor CRM module where the AI tracks outreach, recommends next steps, and manages follow-ups with personalized messaging.
+
+🌍 Map Functionality Summary
+Design the Interactive Business Intelligence Map as a dynamic, real-time visual interface where users can explore business environments globally. It must include:
+
+Geographic data layers visualized via heatmaps and tooltips.
+
+Clickable countries and regions that expand into cards with metrics (e.g., GDP growth, investment hotspots, business ease score).
+
+Industry-specific overlays showing sectors with the highest potential, filtered by user interest.
+
+Support for drill-down from global view to regional zones, cities, and even business parks.
+
+Add animated data changes (e.g., rising sectors, cooling investment) based on sentiment and funding activity.
+
+Allow companies to customize views and export map-based insights into reports.
+
+💡 Key Integrations
+Use OpenAI or similar LLM for business insights, task assistance, legal drafting.
+
+Integrate funding APIs or public datasets for grant discovery.
+
+Include Stripe or PayTabs integration for payment and subscription management.
+
+Offer map data via Mapbox, Leaflet, or custom D3.js visualizations.
+
+Use Neo4j or a graph database for knowledge graph interactions.

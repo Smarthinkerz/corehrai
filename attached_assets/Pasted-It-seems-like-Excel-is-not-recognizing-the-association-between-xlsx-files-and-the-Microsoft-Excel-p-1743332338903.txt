@@ -1,0 +1,33 @@
+It seems like Excel is not recognizing the association between .xlsx files and the Microsoft Excel program. This can happen when the file association settings are changed or when there is an issue with the default application for .xlsx files. To resolve this issue, you can follow these steps:
+
+1. **Set Excel as the Default Program:**
+- Right-click on any .xlsx file.
+- Choose "Open with" and then "Choose another app."
+- Select Microsoft Excel from the list of applications.
+- Make sure to check the box that says, "Always use this app to open .xlsx files."
+- Click "OK" to confirm.
+
+2. **Check Default App Settings:**
+- Go to your computer's settings or control panel.
+- Navigate to the "Default Apps" or "Apps" section.
+- Look for the "Default apps by file type" or a similar option.
+- Find .xlsx and ensure it is associated with Microsoft Excel.
+
+3. **Check Excel File Associations within Excel:**
+- Open Excel.
+- Click on "File" or the Office button (the exact wording might vary depending on your Excel version).
+- Go to "Options" or "Excel Options."
+- In the Excel Options window, go to the "Advanced" section.
+- Scroll down to the "General" section, and make sure that "Ignore other applications that use Dynamic Data Exchange (DDE)" is **unchecked**.
+- Click "OK" to confirm your changes.
+
+4. **Verify iCloud Sync Settings:**
+- If your files are stored in iCloud, make sure iCloud is not causing conflicts with file associations.
+- Check the iCloud settings on your computer and ensure that it's not affecting the way Excel opens files.
+
+5. **Repair Office Installation:**
+- Sometimes, issues with file associations can be caused by a corrupted Office installation.
+- You can try repairing your Office installation by going to the Control Panel (Windows) or Applications (macOS), finding Microsoft Office in the list of installed applications, and choosing the repair or uninstall/repair option.
+
+6. **Reboot Your Computer:**
+- Sometimes, simply restarting your computer can help resolve file association issues.
